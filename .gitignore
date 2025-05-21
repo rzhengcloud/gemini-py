@@ -1,0 +1,30 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.Python
+build/
+dist/
+.venv/
+venv/ # Your virtual environment folder
+env/
+.env # Your environment variable file (important for API keys!)
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.mypy_cache/
+.pytest_cache/
+nox/
+
+# IDEs and OS
+.vscode/ # VS Code specific settings (you might want to keep some if shared, but ignore logs/user settings)
+.idea/ # PyCharm or IntelliJ IDEA
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
