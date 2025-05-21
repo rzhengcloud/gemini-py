@@ -28,3 +28,7 @@ Thumbs.db # Windows specific
 *.log
 *.tmp
 *.bak
+
+
+venv
+.env
