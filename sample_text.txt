@@ -1,0 +1,10 @@
+Hello world! This is a test file.
+Line 2: Python is a versatile language.
+Line 3: Java, C++, and JavaScript are also popular.
+Line 4: python is often used for data science.
+Line 5: Learning regex can be challenging but rewarding.
+Line 6: Email: user@example.com, Phone: 123-456-7890
+Line 7: Another phone: (987) 654-3210
+Line 8: This line contains the word "test" multiple times. test test.
+Line 9: No match here python.
+Line 10: Ending with a flourishpython.

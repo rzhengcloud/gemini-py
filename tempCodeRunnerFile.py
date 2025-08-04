@@ -1,0 +1,2 @@
+getA(x)
+print(x)
