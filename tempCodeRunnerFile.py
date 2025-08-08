@@ -1,2 +1,1 @@
-getA(x)
-print(x)
+x_df = df[df['Salary'] > 80000 & (df['Age']>35 ) ]

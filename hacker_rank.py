@@ -1810,3 +1810,49 @@ else:
             
 # q = Solution()
 # q.countPrimes(10)
+
+
+a = "tzzzreea"
+
+from collections import Counter
+freq = Counter(a)
+print(freq)
+b = sorted(freq.items(), key = lambda x : (-x[1], x[0]))
+print(b)
+
+c = sorted(freq.items(), key = lambda x : (x[1], x[0]))
+print(c)
+
+# print(*(val for val, f in freq.items()))
+
+v = [[5,'a'],[4,'b'],[6,'c']]
+print(v)
+v.sort(key = lambda x : x[1])
+
+print(v)
+
+import pandas as pd
+
+# Create a dictionary of data
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Age': [25, 30, 35, 40],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+df['Salary'] = [70000, 80000, 90000, 100000]
+
+# Print the DataFrame
+y = df['Salary'] > 80000
+print(y)
+x_df = df[(df['Salary'] > 80000) & (df['Age']>35 ) ]
+print(x)
+
+# Correctly filter the DataFrame for salaries greater than 80000
+high_salary_df = df[(df['Salary'] > 80000) | (df['Age'] >= 30)]
+
+# Print the filtered DataFrame
+print(high_salary_df)
