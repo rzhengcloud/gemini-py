@@ -1767,5 +1767,46 @@ if j < len(my_list) and my_list[j] == value_to_find:
 else:
     print(f"{value_to_find} not found in list")
 
+# from typing import List
 
+# class Solution:
+#     def dfs(self, board: List[List[str]], word: str, r: int, c: int, index: int) -> bool:
+#         m, n, wlen = len(board), len(board[0]), len(word)
+#         if r < 0 or r >= m or c < 0 or c >= n or index >= wlen or board[r][c] == '-' or \
+#         word[index] != board[r][c]:
+#             return False
+#         temp_char = board[r][c]
+#         board[r][c] = '-' #temporarily mark it
+#         C = self.dfs(board, word, r, c+1, index+1)
+#         A = self.dfs(board, word, r+1, c, index+1)
+#         B = self.dfs(board, word, r-1, c, index+1)
+#         D = self.dfs(board, word, r, c-1, index+1)
+#         board[r][c] = temp_char #restore it
+#         return A + B + C + D > 0
+#     def exist(self, board: List[List[str]], word: str) -> bool:
+#         m, n = len(board), len(board[0])
+#         for i in range(m):
+#             for j in range(n):
+#                 if board[i][j] == word[0]:
+#                     #start search
+#                     if self.dfs(board, word, i, j, 0):
+#                         return True
+#         return False
+# board = [["A","B","C","D"],["S","F","C","S"],["A","D","E","E"]]
 
+# class Solution:
+#     def countPrimes(self, n: int) -> int:
+#         if n<=1:
+#             return 0
+#         isPrime = [ True ] * n
+#         isPrime[0] = False
+#         isPrime[1] = False
+#         for i in range(2,int(n**0.5)+1):
+#             if isPrime[i]:
+#                 for multiple in range(i*i, n, i):
+#                     isPrime[multiple] = False
+#         print(isPrime)
+#         return sum(isPrime)
+            
+# q = Solution()
+# q.countPrimes(10)
