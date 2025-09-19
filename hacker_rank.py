@@ -1704,68 +1704,68 @@ s = "hellocarworld"
 # sl.add(1)
 
 # print(sl)
-import bisect
+# import bisect
 
-my_list = [1, 2, 3, 4, 4, 6, 8, 10]
-value = 4
-def rz_bisect_left(nums, value):
-    lo, hi = 0, len(nums)-1
-    while lo < hi:
-        mid = (hi + lo) // 2
-        if nums[mid] < value:
-            lo = mid + 1
-        else:
-            hi = mid
-    return lo
+# my_list = [1, 2, 4, 4, 6, 8, 10]
+# value = 11
+# def rz_bisect_left(nums, value):
+#     lo, hi = 0, len(nums)
+#     while lo < hi:
+#         mid = (hi + lo) // 2
+#         if nums[mid] < value:
+#             lo = mid + 1
+#         else:
+#             hi = mid
+#     return lo
 
-def rz_bisect_right(nums, value):
-    lo, hi = 0, len(nums)-1
-    while lo < hi:
-        mid = (hi + lo) // 2
-        if nums[mid] > value:
-            hi = mid
-        else:
-            lo = mid + 1
-    return lo
-# bisect_left finds the index to insert '4' before the existing '4's
-left_index = bisect.bisect_left(my_list, value)
-print(f"bisect_left for {value}: {left_index=}")
-left_index = rz_bisect_left(my_list, value)
-print(f"rz_left for {value}: {left_index=}")
+# def rz_bisect_right(nums, value):
+#     lo, hi = 0, len(nums)
+#     while lo < hi:
+#         mid = (hi + lo) // 2
+#         if nums[mid] > value:
+#             hi = mid
+#         else:
+#             lo = mid + 1
+#     return lo
+# # bisect_left finds the index to insert '4' before the existing '4's
+# left_index = bisect.bisect_left(my_list, value)
+# print(f"bisect_left for {value}: {left_index=}")
+# left_index = rz_bisect_left(my_list, value)
+# print(f"rz_left for {value}: {left_index=}")
 
 # Expected output: bisect_left for 4: 2
 # The index is 2, because we can insert 4 before the first 4.
 # my_list[2] is 4.
 
-# bisect_right finds the index to insert '4' after the existing '4's
-right_index = bisect.bisect_right(my_list, value)
-print(f"bisect_right for {value}: {right_index=}")
-right_index = rz_bisect_right(my_list, value)
-print(f"rz_right for {value}: {right_index=}")
+# # bisect_right finds the index to insert '4' after the existing '4's
+# right_index = bisect.bisect_right(my_list, value)
+# print(f"bisect_right for {value}: {right_index=}")
+# right_index = rz_bisect_right(my_list, value)
+# print(f"rz_right for {value}: {right_index=}")
 
-# Expected output: bisect_right for 4: 5
-# The index is 5, because we can insert 4 after the last 4.
-# my_list[5] is 6.
+# # Expected output: bisect_right for 4: 5
+# # The index is 5, because we can insert 4 after the last 4.
+# # my_list[5] is 6.
 
-#TODO: write our own bisect_left & bisect_right functions
+# #TODO: write our own bisect_left & bisect_right functions
 
 
-my_list = [1, 3, 5, 7, 9]
-value_to_find = 5
+# my_list = [1, 3, 5, 7, 9]
+# value_to_find = 5
 
-i = bisect.bisect_left(my_list, value_to_find)
-if i < len(my_list) and my_list[i] == value_to_find:
-    print(f"Found {value_to_find} at index {i}")
-else:
-    print(f"{value_to_find} not found in list")
+# i = bisect.bisect_left(my_list, value_to_find)
+# if i < len(my_list) and my_list[i] == value_to_find:
+#     print(f"Found {value_to_find} at index {i}")
+# else:
+#     print(f"{value_to_find} not found in list")
 
-# Example for a value not in the list
-value_to_find = 6
-j = bisect.bisect_left(my_list, value_to_find)
-if j < len(my_list) and my_list[j] == value_to_find:
-    print(f"Found {value_to_find} at index {j}")
-else:
-    print(f"{value_to_find} not found in list")
+# # Example for a value not in the list
+# value_to_find = 6
+# j = bisect.bisect_left(my_list, value_to_find)
+# if j < len(my_list) and my_list[j] == value_to_find:
+#     print(f"Found {value_to_find} at index {j}")
+# else:
+#     print(f"{value_to_find} not found in list")
 
 # from typing import List
 
@@ -1812,47 +1812,465 @@ else:
 # q.countPrimes(10)
 
 
-a = "tzzzreea"
+# a = "tzzzreea"
 
-from collections import Counter
-freq = Counter(a)
-print(freq)
-b = sorted(freq.items(), key = lambda x : (-x[1], x[0]))
-print(b)
+# from collections import Counter
+# freq = Counter(a)
+# print(freq)
+# b = sorted(freq.items(), key = lambda x : (-x[1], x[0]))
+# print(b)
 
-c = sorted(freq.items(), key = lambda x : (x[1], x[0]))
-print(c)
+# c = sorted(freq.items(), key = lambda x : (x[1], x[0]))
+# print(c)
 
 # print(*(val for val, f in freq.items()))
 
-v = [[5,'a'],[4,'b'],[6,'c']]
-print(v)
-v.sort(key = lambda x : x[1])
+# v = [[5,'a'],[4,'e'],[6,'c']]
+# print(v)
+# v.sort(key = lambda x : x[1])
 
-print(v)
+# print(v)
 
-import pandas as pd
+# import pandas as pd
 
-# Create a dictionary of data
-data = {
-    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
-    'Age': [25, 30, 35, 40],
-    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']
-}
+# # Create a dictionary of data
+# data = {
+#     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+#     'Age': [25, 30, 35, 40],
+#     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']
+# }
 
-# Create a DataFrame
-df = pd.DataFrame(data)
+# # Create a DataFrame
+# df = pd.DataFrame(data)
 
-df['Salary'] = [70000, 80000, 90000, 100000]
+# df['Salary'] = [70000, 80000, 90000, 100000]
 
-# Print the DataFrame
-y = df['Salary'] > 80000
-print(y)
-x_df = df[(df['Salary'] > 80000) & (df['Age']>35 ) ]
-print(x)
+# # Print the DataFrame
+# y = df['Salary'] > 80000
+# print(y)
+# x_df = df[(df['Salary'] > 80000) & (df['Age']>35 ) ]
+# print(x)
 
-# Correctly filter the DataFrame for salaries greater than 80000
-high_salary_df = df[(df['Salary'] > 80000) | (df['Age'] >= 30)]
+# # Correctly filter the DataFrame for salaries greater than 80000
+# high_salary_df = df[(df['Salary'] > 80000) | (df['Age'] >= 30)]
 
-# Print the filtered DataFrame
-print(high_salary_df)
+# # Print the filtered DataFrame
+# print(high_salary_df)
+
+
+# from typing import List
+# class Solution:
+#     def canSplit(self, nums: List[int], k: int, target: int) -> bool:
+#         cnt, total = 0, 0 #cnt is split count
+#         for num in nums:
+#             total+=num
+#             #if it's total == target, just keep adding, might have 0s later,
+#             #but i dont think that makes a difference.. since we don't care how its split
+#             # 0 can be at the front of the next split also 
+#             if total > target:
+#                 #go back, instead of substract, just set new
+#                 total = num # new total now
+#                 cnt+=1
+#         # reached the end. Do we need to check total <= target? think not since it's checked up there at each +=num.
+#         return cnt == k - 1
+
+
+#     def splitArray(self, nums: List[int], k: int) -> int:
+#         lo, hi = max(nums), sum(nums) #note the search space/boundaries.
+#         while lo < hi:
+#             # mid is the target answer we're guessing
+#             mid = (hi + lo) // 2
+#             if self.canSplit(nums, k, mid) == False:
+#                 lo = mid + 1
+#             else:
+#                 hi = mid
+#         return lo
+
+# q = Solution()
+# nums = [1,4,4]
+# k=3
+# q.splitArray(nums,k)
+# x = [[False for _ in range(5)] for _ in range(2)]
+# print(x)
+# grid = [[False for _ in range(3)] for _ in range(6)]
+# sub_grid = [[[False for _ in range(9)] for _ in range(3)] for _ in range(3)] #
+
+# #print(sub_grid)
+# from typing import List
+# class Solution:
+#     def isValidSudoku(self, grid: List[List[str]]) -> bool:
+#         rows = [ [False for _ in range(9)] for _ in range(9) ] #row[0][5] does row 0 contain 5?
+#         cols =  [ [False for _ in range(9)] for _ in range(9) ]
+#         sub_grid = [[False for _ in range(3)] for _ in range(3)] #
+#         for r in range(len(grid)):
+#             for c in range(len(grid[0])):
+#                 if grid[r][c] == '.':
+#                     continue
+#                 num = int(grid[r][c]) - 1 
+#                 if rows[r][num] or cols[c][num]:
+#                     return False
+#                 if sub_grid[r//3][c//3]:
+#                     return False
+#                 rows[r][num] = cols[c][num] = sub_grid[r//3][c//3] = True
+#         return True
+
+
+# # board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
+# # q = Solution()
+# # print(q.isValidSudoku(board))
+
+# grid = [[ x for x in range(3)] for _ in range(5)]
+# print(grid) #5 rows, 3 cols
+# print(grid[:])
+# for row in grid:
+#     print(row)
+
+# for col in zip(*grid):
+#     print(col)
+
+# A = [1, 2, 3]
+
+# # Using A[:]
+# B = A[:]  # B is a new list, a shallow copy of A
+# print(A)  # Output: [1, 2, 3]
+# print(B)  # Output: [1, 2, 3]
+
+# # Now, modify A
+# A.append(4)
+# print(A)  # Output: [1, 2, 3, 4]
+# print(B)  # Output: [1, 2, 3] - B remains unchanged
+
+
+# original_list = [1, 2, [3, 4]]
+
+# import copy
+# # Create a shallow copy using A[:]
+# shallow_copy = original_list[:]
+# deep_copy = copy.deepcopy(original_list)
+# print(f"Original list before modification: {original_list}")
+# print(f"Shallow copy before modification: {shallow_copy}")
+# print(f"Deep copy before modification: {deep_copy}")
+
+# # Now, let's modify a mutable object (the nested list) inside the shallow copy
+# shallow_copy[2].append(5)
+
+# print("\n--- After modifying the nested list in the shallow copy ---")
+# print(f"Original list after modification: {original_list}")
+# print(f"Shallow copy after modification: {shallow_copy}")
+# print(f"Deep copy after modification: {deep_copy}")
+
+
+# x = [3,5,7,8,9,11]
+
+# print(x[::-1])
+
+# print([a for a in reversed(x)])
+
+# matrix = [[1,2,3],[4,5,6],[7,8,9]]
+# # matrix[:] = reversed(matrix)
+# print(matrix)
+# for a in reversed(matrix):
+#     print(a)
+# from typing import List
+# class Solution:
+#     def rotate(self, matrix: List[List[int]]) -> None:
+#         """
+#         Do not return anything, modify matrix in-place instead.
+#         """
+#         matrix[:] = reversed(matrix)
+#         n = len(matrix)
+#         for i in range(n):
+#             for j in range(i+1,n,1):
+#                 print(i,j)
+#                 #swap
+#                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+# q = Solution()
+# q.rotate(matrix)
+# print(matrix)
+
+
+# from typing import List
+# class Solution:
+#     def subarraySum(self, nums: List[int], k: int) -> int:
+#         m = defaultdict(int)
+#         m[0] = 1
+#         n = len(nums)
+#         count, total = 0, 0
+#         prefix_sum = [nums[0]] * n
+#         # for i, num in enumerate(nums):
+#         #     prefix_sum[]
+#         for i in range(1,n):
+#             prefix_sum[i] = prefix_sum[i-1] + nums[i]
+#         print(prefix_sum)
+#         for i, num in enumerate(nums):
+#             total+=num
+#             prev_sum = prefix_sum[i] - total
+#             if prev_sum in m:   
+#                 count+=m[prev_sum]
+#             m[prefix_sum[i]]+=1
+#         return count
+    
+# nums = [1,1,1,1]
+# q = Solution()
+# q.subarraySum(nums,3)
+
+# class Solution:
+#     def findDuplicates(self, nums: List[int]) -> List[int]:
+#         ans=[]
+#         for num in nums:
+#             index = num - 1 #use num as index
+#             if nums[index] < 0: #negative, so seen before
+#                 ans.append(num) #flip neg to pos
+#             else:
+#                 #mark as seen
+#                 nums[index] = -nums[index]
+#         return ans
+
+
+# s = set([x for x in range(1,3)])
+# print(s)
+
+# print(s)
+# print(s.pop())
+
+# from collections import OrderedDict
+
+# od = OrderedDict()
+
+# od['xapple'] = 3
+# od['banana'] = 2
+# od['orange'] = 5
+
+# print(od)
+
+# for key, val in od.items():
+#     print(key,val)
+
+
+
+# t = tuple(sorted(s))
+# print(t)
+
+# s = "is2 sentence4 This1 a3"
+
+# s = s.split()
+# print(s)
+# s.sort(key=lambda x: x[-1])
+# print(s)
+
+# s= "345"
+
+# print(s.isnumeric())
+
+# from collections import Counter
+# s = [1,2,3,3,2,1,5,5,5,5,5,5]
+# counts = Counter(s)
+
+# print(counts.items())
+# print(counts)
+
+# my_counter = Counter({'apple': 3, 'banana': 2, 'orange': 1})
+# print(f"Before deletion: {my_counter}")
+
+# # del my_counter['banana']
+# my_counter.pop('banana')
+# print(f"After deleting 'banana': {my_counter}")
+
+# s = "  TO BE OR NOT TO BE    "
+# print(s.lstrip())
+# s = s.split()
+# print(s)
+# n = len(s)
+# max_word=0
+# max_word = max(len(x) for x in s)
+# max_word = max(map(len,s))
+# # print(*(len(x) for x in s))
+# ans=[['' for _ in range(n)] for _ in range(max_word) ]
+
+# print(ans)
+# from typing import List
+# import heapq
+# class Solution:
+#     def lastStoneWeight(self, stones: List[int]) -> int:
+#         max_heap = stones[:]
+#         heapq.heapify(max_heap)
+#         stones.append(99)
+#         print(max_heap)
+#         print(stones)
+#         return 0
+#         # while len(max_heap) > 1:
+#         #     x = heapq.heappop(max_heap)
+#         #     y = heapq.heappop(max_heap)
+#         #     heapq.heappush(max_heap, x-y)
+#         # return max_heap[0]
+
+# q = Solution()
+# stones=[6,1,2,3,4]
+# q.lastStoneWeight(stones)
+
+
+# s = "TO BE OR NOT123 TO BE"
+
+# s = s.split()
+# x = max(len(word) for word in s)
+# y = list(map(len, s))
+# print(x)
+# print(y)
+
+# from typing import List
+# from math import inf
+# class Solution:
+#     def sortedSquares(self, nums: List[int]) -> List[int]:
+#         mid = 0
+#         smallest=inf
+#         for i, num in enumerate(nums):
+#             if abs(num) < smallest:
+#                 #discard negative sign
+#                 smallest = abs(num) # new smaller
+#                 mid = i
+#         ans = [nums[mid]**2]
+#         left = mid - 1
+#         right = mid + 1
+#         n = len(nums)
+#         while left >= 0 or right < n:
+#             if left >= 0 or abs(nums[left]) < abs(nums[right]):
+#                 ans.append(nums[left]**2)
+#                 left-=1
+#             else:
+#                 ans.append(nums[right]**2)
+#                 right+=1
+#         return ans
+
+# from typing import List
+# class Solution:
+#     def trap(self, height: List[int]) -> int:
+#         stk = [] # (val, index)
+#         res = 0
+#         for i, ht in enumerate(height):
+#             while stk and stk[-1][0] < ht:
+#                 h_1, i_1 = stk.pop()
+#                 if stk:
+#                     h_2, i_2 = stk[-1]
+#                     width = i - i_2 - 1
+#                     h = min(ht, h_2) - h_1
+#                     res+= width * h
+#             stk.append((ht, i))
+#         return res
+# qq = Solution()
+# height = [0,1,0,2,1,0,1,3,2,1,2,1]
+# qq.trap(height)
+
+# from collections import deque
+# import collections
+# from typing import List
+# class Solution:
+#     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+#         dq = collections.deque()
+#         ans = []
+#         left = 0
+#         for i in range(len(nums)):
+#             while dq and dq[-1] < nums[i]:
+#                 dq.pop()
+#             dq.append(nums[i])
+#             if i - left == k - 1:
+#                 ans.append(dq[0])
+#                 if dq[0] == nums[left]:
+#                     dq.popleft()
+#                 left+=1
+#         return ans
+# nums = [4, 1, 5, 2, 5, 3]
+# q = Solution()
+# q.maxSlidingWindow(nums,3)
+
+# import heapq
+# min_heap= []
+# heapq.heappush(min_heap, (5,2))
+# heapq.heappush(min_heap, (6,1))
+# heapq.heappush(min_heap, (4,0))
+
+# print(heapq.heappop(min_heap))
+# print(heapq.heappop(min_heap))
+# print(min_heap[0])\\\
+
+
+# def maximumGap(nums):
+#     n = len(nums)
+#     if n < 2:
+#         return 0
+
+#     min_val, max_val = min(nums), max(nums)
+#     if min_val == max_val:
+#         return 0
+
+#     # Step 1: calculate bucket size
+#     bucket_size = math.ceil((max_val - min_val) / (n - 1))
+#     bucket_count = (max_val - min_val) // bucket_size + 1
+
+#     # Step 2: create buckets
+#     buckets = [[math.inf, -math.inf] for _ in range(bucket_count)]
+#     # Each bucket stores [min_in_bucket, max_in_bucket]
+
+#     # Step 3: place numbers into buckets
+#     for num in nums:
+#         if num == min_val or num == max_val:
+#             continue  # skip extremes, handle separately
+#         idx = (num - min_val) // bucket_size
+#         buckets[idx][0] = min(buckets[idx][0], num)
+#         buckets[idx][1] = max(buckets[idx][1], num)
+
+#     # Step 4: scan buckets to find max gap
+#     max_gap = 0
+#     prev = min_val
+#     for b_min, b_max in buckets:
+#         if b_min == math.inf:  # empty bucket
+#             continue
+#         max_gap = max(max_gap, b_min - prev)
+#         prev = b_max
+
+#     # Final gap with max_val
+#     max_gap = max(max_gap, max_val - prev)
+
+#     return max_gap
+
+
+# import math
+# from typing import List
+# class Solution:
+#     def maximumGap(self, nums: List[int]) -> int:
+#         if len(nums) < 2:
+#             return 0
+#         max_val = max(nums)
+#         min_val = min(nums)
+#         n = len(nums)
+#         bucket_size = math.ceil((max_val - min_val) / (n-1))
+#         #how many buckets do we need to cover the whole range [min_val, max_val]?
+# #         Suppose we want to place max_val into some bucket.
+# # If (max_val - min_val) is exactly divisible by bucket_size, we still need one more bucket to hold max_val.
+# # So we add +1 to ensure the last bucket always exists.
+#         num_buckets = (max_val - min_val) // bucket_size + 1 
+#         #[[min, max]], but initialize with [inf, -inf]
+#         buckets = [[math.inf, -math.inf] for _ in range(num_buckets)]
+#         for num in nums:
+#             if num == max_val or num == min_val:
+#                 continue
+#             #how do we know which buckets `num` goes into? 
+#             # compute index by subtracting the min_val, then see which bucket it goes in
+#             index = (num - min_val) // bucket_size
+#             buckets[index][0] = min(buckets[index][0], num) #store min
+#             buckets[index][1] = max(buckets[index][1], num) #store max
+#         max_gap = 0
+#         prev_max = 0
+#         for i in range(num_buckets):
+#             if buckets[i][0] == math.inf or buckets[i][1] == -math.inf:
+#                 continue
+#             curr_min = buckets[i][0] #min
+#             max_gap = max(max_gap, curr_min - prev_max)
+#             prev_max = buckets[i][1]
+#         max_gap = max(max_gap, max_val - prev_max) #tricky, check last number
+#         return max_gap
+
+# q = Solution()
+# nums = [1,100000]
+# print(q.maximumGap(nums))
+
+# print(maximumGap(nums))
