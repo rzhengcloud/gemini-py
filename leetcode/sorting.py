@@ -33,5 +33,12 @@ print(count)
 for key in count:
     print(f"{key=}")
     
-for key, val in count.items():
-    print(f"{key=}, {val=}")
+# for key, val in count.items():
+#     print(f"{key=}, {val=}")
+
+# count = sorted(count.items(), key = lambda x: x[1])
+# print(count)
+
+# del count['o']
+
+# print(count)

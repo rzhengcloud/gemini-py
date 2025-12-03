@@ -2274,3 +2274,36 @@ s = "hellocarworld"
 # print(q.maximumGap(nums))
 
 # print(maximumGap(nums))
+
+# from typing import List
+# from collections import Counter
+# class Solution:
+#     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
+#         # counts = Counter(arr)
+#         # unique_remaining = len(counts)
+
+#         # # [2,2,2,2,5,5,5,5] becomes [4,4]
+#         # for freq in sorted(counts.values()): # go thru [4,4]
+#         #     if k >= freq:
+#         #         k -= freq
+#         #         unique_remaining -= 1
+#         #     else:
+#         #         return unique_remaining
+#         # return unique_remaining
+
+#         c = Counter(arr)
+#         cnt, remaining = Counter(c.values()), len(c)
+#         print(cnt)
+#         for key in sorted(cnt): 
+#             if k >= key * cnt[key]:
+#                 k -= key * cnt[key]
+#                 remaining -= cnt.pop(key)
+#             else:
+#                 return remaining - k // key
+#         return remaining
+
+# arr = [4,3,1,1,3,3,2]
+# q=  Solution()
+# q.findLeastNumOfUniqueInts(arr,3)
+
+
