@@ -32,3 +32,4 @@ Thumbs.db # Windows specific
 
 venv
 .env
+.aider*

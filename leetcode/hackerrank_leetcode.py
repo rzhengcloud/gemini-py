@@ -133,25 +133,31 @@ from collections import defaultdict
 # print(minion_game("BANANA"))
 
 
-# s = "123456789----"
 
-# k = 4
-
+# s = "123456789"
 # # ["1234","5678","9***"]
+# k = 4
+# print(len(s)//k)
+
 
 # res = []
 
+# #handle full chunks
 # for i in range(len(s)//k):
-#     index = i*k
-#     # if i + k >= len(s):
-#     #     res.append(s[i+k+1:]+'*'*(len(s) - (i + k)))
-#     res.append(s[index:index+k])
+#     index = i*k # 0,4,8, etc
+#     res.append(s[index:index+k]) # size k
 
-# r = len(s) % k
-# idx = len(s)//k*k
-# res.append(s[len(s)-r:]+'*'*(k-r))
+# #handle remainder
+# r = len(s) % k # 9 % 4 = 1
+# if r:
+#     idx = len(s) - r # 9 - 1 = 8. we start from s[8] = 9
+#     padding = '*' * (k - r)
+#     res.append(s[idx:] + padding) # one `9` and three `*`
 
 # print(res)
+
+# res=[]
+
 
 # x = []
 
@@ -160,15 +166,16 @@ from collections import defaultdict
 #     if len(chunk) < k:
 #         chunk+= (k-len(chunk) )*'*'
 #     x.append(chunk)
-# print(x) 
+# print(f"{x=}") 
 
 
-# records = [[40,"Bob"], [30, "Din"], [40,"Alex"]]
 
-# print(records)
-
-# records.sort()
-# print(records)
+# from collections import Counter
+# s = "leetcode"
+# mp = Counter([c for c in s])
+# mp2 = Counter(s)
+# print(mp)
+# print(mp2)
 
 # records.sort(key=lambda x:x[1], reverse=True)
 # print(records)
@@ -216,6 +223,7 @@ records = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], [
 # ans.sort()
 # for name in ans:
 #     print(name)
+
 
 
 #use dict
@@ -812,6 +820,19 @@ my_set={1, 2, 3, 4, 5, 6, 7, 8, 9}
 # account1.withdraw(100.00)
 
 from abc import ABC, abstractmethod
+import sys
+import os
+
+# 1. Get the directory of the current script (hackerrank_leetcode.py)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Get the parent directory (one level up)
+parent_dir = os.path.dirname(current_dir)
+
+# 3. Insert the parent directory path at the beginning of sys.path
+#    This tells Python's import mechanism to look there first.
+sys.path.insert(0, parent_dir)
+
 from exceptions import *
 class BankAccount(ABC):
     def __init__(self, owner: str, initial_balance: float = 0.0):
